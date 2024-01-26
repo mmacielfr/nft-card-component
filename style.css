@@ -5,3 +5,130 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: outfit, "sans-serif";
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(217, 54%, 11%);
+}
+
+.main-container {
+    max-width: 335px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: hsl(216, 50%, 16%);
+    padding: 1.6em;
+}
+
+.nft-img {
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+}
+
+.shadow {
+	position: absolute;
+	width: 18.875rem;
+	height: 18.875rem;
+	background-color: #00fff8;
+	margin: 1.5rem;
+	border-radius: 0.5rem;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.shadow::before {
+	content: url('./images/icon-view.svg');
+	opacity: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 3rem;
+	height: 3rem;
+}
+
+.shadow:hover {
+	cursor: pointer;
+	opacity: 0.503;
+}
+
+.shadow:hover::before {
+	opacity: 0.9;
+}
+
+.title-description {
+    margin: 1.2em 0;
+}
+
+.title-description h2 {
+    color:  hsl(0, 0%, 100%);
+    margin-bottom: 0.6em;
+}
+
+.title-description h2:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.title-description p {
+    font-size: 18px;
+    color: hsl(215, 51%, 70%);
+}
+
+.cost-timeout {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.1em;
+}
+
+.cost-timeout .cost {
+    color: hsl(178, 100%, 50%);
+    width: 31%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cost-timeout .timeout {
+    color: hsl(215, 51%, 70%);
+    width: 34%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.author {
+    border-top: 0.5px solid hsl(215, 32%, 27%);
+    padding-top: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+.author img {
+    border: solid 1.5px hsl(0, 0%, 100%);
+    border-radius: 100%;
+    width: 13%;
+}
+
+.author p {
+    color: hsl(215, 51%, 70%);
+    margin-left: 1.1em;
+}
+
+.author p a {
+    color: hsl(0, 0%, 100%);
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.author p a:hover {
+    color: hsl(178, 100%, 50%);
+}
